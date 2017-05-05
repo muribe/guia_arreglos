@@ -1,6 +1,6 @@
-def mode(ary)
+def mode(array)
   seen = Hash.new(0)
-  ary.each {|value| seen[value] += 1}
+  array.each {|value| seen[value] += 1}
   max = seen.values.max
   seen.find_all {|key,value| value == max}.map {|key,value| key}
 end
