@@ -1,8 +1,8 @@
 def mode(array)
   seen = Hash.new(0)
-  array.each {|value| seen[value] += 1}
+  array.each {|i| seen[i] += 1}
   max = seen.values.max
-  seen.find_all {|key,value| value == max}.map {|key,value| key}
+  seen.find_all {|value,i| i == max}.map {|value,i| value}
 end
 def average(array)        
     return (array.inject(0, :+)/array.length.to_f).round(2)
